@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>copy.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="assets\Close_64x64.png" />
+    <None Remove="assets\Info_64x64.png" />
+    <None Remove="assets\NewFile_64x64.png" />
+    <None Remove="assets\Open_64x64.png" />
+    <None Remove="assets\SaveAs_64x64.png" />
+    <None Remove="assets\Save_64x64.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="assets\Close_64x64.png" />
+    <Resource Include="assets\Info_64x64.png" />
+    <Resource Include="assets\NewFile_64x64.png" />
+    <Resource Include="assets\Open_64x64.png" />
+    <Resource Include="assets\SaveAs_64x64.png" />
+    <Resource Include="assets\Save_64x64.png" />
+  </ItemGroup>
+
+</Project>

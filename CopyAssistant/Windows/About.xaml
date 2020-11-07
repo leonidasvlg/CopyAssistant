@@ -1,0 +1,39 @@
+﻿<Window x:Class="CopyAssistant.Windows.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CopyAssistant.Windows"
+        mc:Ignorable="d"
+        Title="About" Height="400" Width="400" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <!-- Row 1 -->
+        <TextBlock Grid.Column="1" Grid.Row="1" TextWrapping="Wrap">
+                    Copy Assistant is a simple app created in WPF C# and it is designed to easily copy blocks of text to clipboard.<LineBreak/><LineBreak/>
+                    There are 10 textboxes, each one has its own “copy” button, pressing it and the corresponding textbox contents will be copied to clipboard. Once a successful copy to the clipboard occur, the textbox will be highlighted in green. If you have a larger block of text that doesn’t easily fit in the small dimensions of the textboxes, you can double-click on the textbox to open an editor.<LineBreak/><LineBreak/>
+                    Copy Assistant can also save and load the contents to either "txt" or "json" files. There are also automations to prevent accidental unsaved changes to be lost before loading or exiting the app.<LineBreak/><LineBreak/>
+                    Released under MIT License.<LineBreak/><LineBreak/>    
+                    Copyright (c) 2020 Leonidas voulgaris.<LineBreak/><LineBreak/>
+        </TextBlock>
+
+        <!-- Row 2 -->
+        <Button x:Name="btnAboutOk" Grid.Row="2" Grid.Column="1" Width="100" Height="30" 
+                Margin="0,0" Content="OK" FontSize="18" Click="btnAboutOk_Click" />
+
+    </Grid>
+    
+</Window>

@@ -1,0 +1,157 @@
+﻿<Window x:Class="CopyAssistant.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CopyAssistant"
+        mc:Ignorable="d"
+        Title="Copy Assistant" Height="390" Width="450" MinHeight="390" MinWidth="200"
+        x:Name="CopyAssistant" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ResourceDictionary>
+            <BitmapImage x:Key="mainIcon" UriSource="assets\copy.ico"></BitmapImage>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Grid>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- TopMenu -->
+        <Menu DockPanel.Dock="Top" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Margin="0 0 0 5">
+            <MenuItem Header="_File" >
+                <MenuItem Header="_New" Click="New_Click" >
+                    <MenuItem.Icon>
+                        <Image Source="/assets/NewFile_64x64.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="_Open" Click="Load_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/assets/Open_64x64.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="_Save" Click="Save_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/assets/Save_64x64.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="_Save As" Click="SaveAs_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/assets/SaveAs_64x64.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="_Close" Click="Close_Click"  >
+                    <MenuItem.Icon>
+                        <Image Source="/assets/Close_64x64.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About" Click="OpenAboutWindow">
+                    <MenuItem.Icon>
+                        <Image Source="/assets/Info_64x64.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <!-- Button/TextBox List -->
+        <Button x:Name="CopyBtn1" Grid.Column="0" Grid.Row="1" Margin="10 5 10 5" 
+                Content="Copy" VerticalAlignment="Top" Click="CopyBtn_Click" />
+        <TextBox x:Name="TextBox1" Grid.Column="1" Grid.Row="1" Margin="0 5 10 5"
+                AcceptsReturn="True" AcceptsTab="True" SpellCheck.IsEnabled="True" 
+                ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                MouseDoubleClick="TextBox_MouseDoubleClick" TextChanged="ContentChanged"></TextBox>
+
+        <Button x:Name="CopyBtn2" Grid.Column="0" Grid.Row="2" Margin="10 5 10 5" 
+                Content="Copy" VerticalAlignment="Top" Click="CopyBtn_Click" />
+        <TextBox x:Name="TextBox2" Grid.Column="1" Grid.Row="2" Margin="0 5 10 5"
+                AcceptsReturn="True" AcceptsTab="True" SpellCheck.IsEnabled="True" 
+                ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                MouseDoubleClick="TextBox_MouseDoubleClick" TextChanged="ContentChanged"></TextBox>
+                
+        <Button x:Name="CopyBtn3" Grid.Column="0" Grid.Row="3" Margin="10 5 10 5" 
+                Content="Copy" MinHeight="20" VerticalAlignment="Top" Click="CopyBtn_Click" />
+        <TextBox x:Name="TextBox3" Grid.Column="1" Grid.Row="3" Margin="0 5 10 5"
+                AcceptsReturn="True" AcceptsTab="True" SpellCheck.IsEnabled="True" 
+                ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                MouseDoubleClick="TextBox_MouseDoubleClick" TextChanged="ContentChanged"></TextBox>
+
+        <Button x:Name="CopyBtn4" Grid.Column="0" Grid.Row="4" Margin="10 5 10 5" 
+                Content="Copy" MinHeight="20" VerticalAlignment="Top" Click="CopyBtn_Click" />
+        <TextBox x:Name="TextBox4" Grid.Column="1" Grid.Row="4" Margin="0 5 10 5"
+                AcceptsReturn="True" AcceptsTab="True" SpellCheck.IsEnabled="True" 
+                ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                MouseDoubleClick="TextBox_MouseDoubleClick" TextChanged="ContentChanged"></TextBox>
+                
+        <Button x:Name="CopyBtn5" Grid.Column="0" Grid.Row="5" Margin="10 5 10 5" 
+                Content="Copy" MinHeight="20" VerticalAlignment="Top" Click="CopyBtn_Click" />
+        <TextBox x:Name="TextBox5" Grid.Column="1" Grid.Row="5" Margin="0 5 10 5"
+                AcceptsReturn="True" AcceptsTab="True" SpellCheck.IsEnabled="True" 
+                ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                MouseDoubleClick="TextBox_MouseDoubleClick" TextChanged="ContentChanged"></TextBox>
+                
+        <Button x:Name="CopyBtn6" Grid.Column="0" Grid.Row="6" Margin="10 5 10 5" 
+                Content="Copy" MinHeight="20" VerticalAlignment="Top" Click="CopyBtn_Click" />
+        <TextBox x:Name="TextBox6" Grid.Column="1" Grid.Row="6" Margin="0 5 10 5"
+                AcceptsReturn="True" AcceptsTab="True" SpellCheck.IsEnabled="True" 
+                ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                MouseDoubleClick="TextBox_MouseDoubleClick" TextChanged="ContentChanged"></TextBox>
+
+        <Button x:Name="CopyBtn7" Grid.Column="0" Grid.Row="7" Margin="10 5 10 5" 
+                Content="Copy" MinHeight="20" VerticalAlignment="Top" Click="CopyBtn_Click" />
+        <TextBox x:Name="TextBox7" Grid.Column="1" Grid.Row="7" Margin="0 5 10 5"
+                AcceptsReturn="True" AcceptsTab="True" SpellCheck.IsEnabled="True" 
+                ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                MouseDoubleClick="TextBox_MouseDoubleClick" TextChanged="ContentChanged"></TextBox>
+                
+        <Button x:Name="CopyBtn8" Grid.Column="0" Grid.Row="8" Margin="10 5 10 5" 
+                Content="Copy" MinHeight="20" VerticalAlignment="Top" Click="CopyBtn_Click" />
+        <TextBox x:Name="TextBox8" Grid.Column="1" Grid.Row="8" Margin="0 5 10 5"
+                AcceptsReturn="True" AcceptsTab="True" SpellCheck.IsEnabled="True" 
+                ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                MouseDoubleClick="TextBox_MouseDoubleClick" TextChanged="ContentChanged"></TextBox>
+                
+        <Button x:Name="CopyBtn9" Grid.Column="0" Grid.Row="9" Margin="10 5 10 5" 
+                Content="Copy" MinHeight="20" VerticalAlignment="Top" Click="CopyBtn_Click" />
+        <TextBox x:Name="TextBox9" Grid.Column="1" Grid.Row="9" Margin="0 5 10 5"
+                AcceptsReturn="True" AcceptsTab="True" SpellCheck.IsEnabled="True" 
+                ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                MouseDoubleClick="TextBox_MouseDoubleClick" TextChanged="ContentChanged"></TextBox>
+
+        <Button x:Name="CopyBtn10" Grid.Column="0" Grid.Row="10" Margin="10 5 10 5" 
+                Content="Copy" MinHeight="20" VerticalAlignment="Top" Click="CopyBtn_Click" />
+        <TextBox x:Name="TextBox10" Grid.Column="1" Grid.Row="10" Margin="0 5 10 5"
+                AcceptsReturn="True" AcceptsTab="True" SpellCheck.IsEnabled="True" 
+                ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                MouseDoubleClick="TextBox_MouseDoubleClick" TextChanged="ContentChanged"></TextBox>
+
+        <!-- StatusBar -->
+        <StatusBar x:Name="StatusBar" Grid.Column="0" Grid.Row="11" Margin="0 5 0 0" Grid.ColumnSpan="2">
+            <StatusBarItem>
+                <TextBlock Name="statusLastAction" Text="Ready to Copy" />
+            </StatusBarItem>
+        </StatusBar>
+
+    </Grid>
+    
+</Window>
